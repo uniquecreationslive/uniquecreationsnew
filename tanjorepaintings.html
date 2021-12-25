@@ -1,0 +1,507 @@
+<!Doctype HTML>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="description" content="unique creations">
+		<meta name="keywords" content="unique creations, tanjore painting online, unique creations live, jewels online shopping, tanjore painting online shopping">
+		<meta name="author" content="engineerthoughts">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> Unique Creations</title>
+		<link rel="shortcut icon" href="images/logo/logo.png">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/rowcol.css">
+		<link rel="stylesheet" href="css/sidenav.css">
+		<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+	
+	<body>
+	
+	
+		<img src="images/logo/logo.png" width="200px"></img>
+		<div class="topnav" id="myTopnav">
+			<!--<a> <img src="images/logo.jpeg" width='20px', height='18px'> </a>-->
+			<a href="index.html">🏠 Home</a>
+			<a href="tanjorepaintings.html" class="active">🎨 Tanjore Painting</a>
+			<a href="jewels.html">💎 Jewels</a>
+			<a href="contact.html">📞 Contact</a>
+			<a id="topnav6" href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">☰</a>
+		</div>
+		
+		<div class="fixed">
+			<p class="cartListitem" onclick="openNav()">Cart List 🛒 <span id="cartquantity">0</span></p>
+		</div>
+		
+		<center>
+		
+		
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<p>Cart List ▽</p>
+			
+			<center>
+			<table id="cartlist" class="cartlistclass">
+				<tr>
+					<th>Product Name</th>
+					<th>Product Code</th>
+					<th>Price</th>
+					<th>Quantity</th>
+					<th>Total Price</th>
+					<th>Actions</th>
+				</tr>
+			</table>
+			<p>TOTAL PRICE: ₹<span id="ptotalvalue">0</span></p>
+			
+			<button id="proceedcheckout" class="checkoutbutton" onclick="openpay()" >Proceed to Checkout</button>
+			<br><br>
+			<div id="pdetails" style="display:none">
+			
+				
+					<div class="row">
+					
+						<div class="column50 c50left" style="text-align:right">
+							<span class="valtext">NAME</span>
+						</div>
+						<div class="column50 c50right">
+							<input type="text" class="getvalform" id="username" name="username" required></input>
+						</div>
+							<br><br>
+							
+						<div class="column50 c50left" style="text-align:right">
+							<span class="valtext">EMAIL</span>
+						</div>
+						<div class="column50 c50right">
+							<input type="text" class="getvalform" id="email" name="email" required></input>
+						</div>	
+							<br><br>
+						
+						<div class="column50 c50left" style="text-align:right">
+							<span class="valtext">ADDRESS</span>
+						</div>
+						<div class="column50 c50right">
+							<input type="text" class="getvalform" id="address" name="address" required></input>
+						</div>	
+							<br><br>
+							
+						<div class="column50 c50left" style="text-align:right">	
+							<span class="valtext">NUMBER</span>
+						</div>
+						<div class="column50 c50right">
+							<input type="text" class="getvalform" id="phone" name="phone" required></input>
+						</div>	
+						<div id="errorId" style="display:none;"><span style="color:red">*</span><span style="color:black">Please enter the Required Field</span></div>
+							<br><br>
+						<input type="submit" class="checkoutbutton" id="payment_btn" value="PayNow" onclick="checkvalue();"></input>
+						
+					</div>
+				
+			</div>
+			
+			</center>
+		
+		</div>
+		
+	
+		<div class="row">
+			<div class="column">
+				<h2 class="headprod" id="productname1">Ganesha</h2>
+				<p class="prodcode" id="productcode1">TAN001</p>
+				<img class="prodimgmarg" src="images/products/tanjorePaintings/TAN001/1.jpeg" id="proda1" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/tanjorePaintings/TAN001/2.jpeg" id="prodb1" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda1','prodb1');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda1','prodb1');"> ▷ </button>
+				</div>
+				
+				<p class="proddesc"><b>Description:</b> 15*12 inch painting size.<br><b>frame:</b> Traditional frame</p>
+				
+				<b><p class="prodcode">Price: RS.7000</P></b>
+				<input type="text" id="prodprice1" class="prodpricecss" value="7000"></input>
+				<button class="incbutton" onclick="qtydec('prodqty1','prodprice1',1);">-</button>
+				<input type="number" id="prodqty1" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty1','prodprice1',1);">+</button>
+				
+				<br><br>
+				<button class="cartbutton">
+					<a href="https://api.whatsapp.com/send?phone=919003593268&text=Hi%20I%20Would%20like%20to%20buy%20your%20product%20TAN001-Ganesha%20" 
+					target="_top" style="text-decoration:none;color:white">Place order 💬</a>
+				</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+			
+			
+			<div class="column" >					
+				<h2 class="headprod" id="productname2">Annapoorani</h2>
+				<p class="prodcode" id="productcode2">TAN002</p>
+				<img class="prodimgmarg" src="images/products/tanjorePaintings/TAN002/1.jpeg" id="proda2" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/tanjorePaintings/TAN002/2.jpeg" id="prodb2" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda2','prodb2');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda2','prodb2');"> ▷ </button>
+				</div>
+				
+				<p class="proddesc"><b>Description:</b> 15*12 inch painting size.<br>
+				<b>frame:</b> Traditional frame</p>
+				
+				<b><p class="prodcode">PRICE: RS.7000</P></b>
+				<input type="text" id="prodprice2" class="prodpricecss" value="7000"></input>
+				<button class="incbutton" onclick="qtydec('prodqty2','prodprice2',2);">-</button>
+				<input type="number" id="prodqty2" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty2','prodprice2',2);">+</button>
+				
+				<br><br>
+				<button class="cartbutton">
+					<a href="https://api.whatsapp.com/send?phone=919003593268&text=Hi%20I%20Would%20like%20to%20buy%20your%20product%20TAN002-Annapoorani%20" 
+					target="_top" style="text-decoration:none;color:white">Place order 💬</a>
+				</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+			
+			
+			<div class="column">
+				<h2 class="headprod" id="productname3">Annam</h2>
+				<p class="prodcode" id="productcode3">TAN003</p>
+				<img class="prodimgmarg" src="images/products/tanjorePaintings/TAN003/1.jpeg" id="proda3" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/tanjorePaintings/TAN003/2.jpeg" id="prodb3" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda3','prodb3');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda3','prodb3');"> ▷ </button>
+				</div>
+				
+				<p class="proddesc"><b>Description:</b> 10*8 inch painting size.<br>
+				<b>frame:</b> Traditional frame</p>
+				
+				<b><p class="prodcode">PRICE: RS.2500</P></b>
+				<input type="text" id="prodprice3" class="prodpricecss" value="2500"></input>
+				<button class="incbutton" onclick="qtydec('prodqty3','prodprice3',3);">-</button>
+				<input type="number" id="prodqty3" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty3','prodprice3',3);">+</button>
+				
+				<br><br>
+				<button class="cartbutton">
+					<a href="https://api.whatsapp.com/send?phone=919003593268&text=Hi%20I%20Would%20like%20to%20buy%20your%20product%20TAN003-Annam%20" 
+					target="_top" style="text-decoration:none;color:white">Place order 💬</a>
+				</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>	
+			
+			<div class="column">
+				<h2 class="headprod" id="productname4">Ganesha</h2>
+				<p class="prodcode" id="productcode4">TAN004</p>
+				<img class="prodimgmarg" src="images/products/tanjorePaintings/TAN004/1.jpeg" id="proda4" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/tanjorePaintings/TAN004/2.jpeg" id="prodb4" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda4','prodb4');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda4','prodb4');"> ▷ </button>
+				</div>
+				
+				<p class="proddesc"><b>Description:</b> 15*12 inch painting size.<br>
+				<b>frame:</b> Traditional frame</p>
+				
+				<b><p class="prodcode">PRICE: RS.7000</P></b>
+				<input type="text" id="prodprice4" class="prodpricecss" value="7000"></input>
+				<button class="incbutton" onclick="qtydec('prodqty4','prodprice4',4);">-</button>
+				<input type="number" id="prodqty4" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty4','prodprice4',4);">+</button>
+				
+				<br><br>
+				<button class="cartbutton">
+					<a href="https://api.whatsapp.com/send?phone=919003593268&text=Hi%20I%20Would%20like%20to%20buy%20your%20product%20TAN004-Ganesha%20" 
+					target="_top" style="text-decoration:none;color:white">Place order 💬</a>
+				</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+			
+			<div class="column">
+				<h2 class="headprod" id="productname5">Radha khrishna</h2>
+				<p class="prodcode" id="productcode5">TAN005</p>
+				<img class="prodimgmarg" src="images/products/tanjorePaintings/TAN005/1.jpeg" id="proda5" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/tanjorePaintings/TAN005/2.jpeg" id="prodb5" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda5','prodb5');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda5','prodb5');"> ▷ </button>
+				</div>
+				
+				<p class="proddesc"><b>Description:</b> 15*12 inch painting size.<br>
+				<b>frame:</b> Traditional frame</p>
+				
+				<b><p class="prodcode">PRICE: RS.7500</P></b>
+				<input type="text" id="prodprice5" class="prodpricecss" value="7500"></input>
+				<button class="incbutton" onclick="qtydec('prodqty5','prodprice5',5);">-</button>
+				<input type="number" id="prodqty5" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty5','prodprice5',5);">+</button>
+				
+				<br><br>
+				<button class="cartbutton">
+					<a href="https://api.whatsapp.com/send?phone=919003593268&text=Hi%20I%20Would%20like%20to%20buy%20your%20product%20TAN005-RadhaKhrishna%20" 
+					target="_top" style="text-decoration:none;color:white">Place order 💬</a>
+				</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+			
+			<div class="column">
+				<h2 class="headprod" id="productname6">Komatha</h2>
+				<p class="prodcode" id="productcode6">TAN006</p>
+				<img class="prodimgmarg" src="images/products/tanjorePaintings/TAN006/1.jpeg" id="proda6" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/tanjorePaintings/TAN006/2.jpeg" id="prodb6" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda6','prodb6');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda6','prodb6');"> ▷ </button>
+				</div>
+				
+				<p class="proddesc"><b>Description:</b> 10*8 inch painting size.<br>
+				<b>frame:</b> Traditional frame</p>
+				
+				<b><p class="prodcode">PRICE: RS.2500</P></b>
+				<input type="text" id="prodprice6" class="prodpricecss" value="2500"></input>
+				<button class="incbutton" onclick="qtydec('prodqty6','prodprice6',6);">-</button>
+				<input type="number" id="prodqty6" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty6','prodprice6',6);">+</button>
+				
+				<br><br>
+				<button class="cartbutton">
+					<a href="https://api.whatsapp.com/send?phone=919003593268&text=Hi%20I%20Would%20like%20to%20buy%20your%20product%20TAN006-Komatha%20" 
+					target="_top" style="text-decoration:none;color:white">Place order 💬</a>
+				</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+			
+			<div class="column">
+				<h2 class="headprod" id="productname7">Krishna</h2>
+				<p class="prodcode" id="productcode7">TAN007</p>
+				<img class="prodimgmarg" src="images/products/tanjorePaintings/TAN007/1.jpeg" id="proda7" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/tanjorePaintings/TAN007/2.jpeg" id="prodb7" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda7','prodb7');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda7','prodb7');"> ▷ </button>
+				</div>
+				
+				<p class="proddesc"><b>Description:</b> 15*12 inch painting size.<br>
+				<b>frame:</b> Traditional frame</p>
+				
+				<b><p class="prodcode">PRICE: RS.7000</P></b>
+				<input type="text" id="prodprice7" class="prodpricecss" value="7000"></input>
+				<button class="incbutton" onclick="qtydec('prodqty7','prodprice7',7);">-</button>
+				<input type="number" id="prodqty7" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty7','prodprice7',7);">+</button>
+				
+				<br><br>
+				<button class="cartbutton">
+					<a href="https://api.whatsapp.com/send?phone=919003593268&text=Hi%20I%20Would%20like%20to%20buy%20your%20product%20TAN007-Krishna%20" 
+					target="_top" style="text-decoration:none;color:white">Place order 💬</a>
+				</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+			
+			<div class="column">
+				<h2 class="headprod" id="productname8">Lakshmi</h2>
+				<p class="prodcode" id="productcode8">TAN008</p>
+				<img class="prodimgmarg" src="images/products/tanjorePaintings/TAN008/1.jpeg" id="proda8" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/tanjorePaintings/TAN008/2.jpeg" id="prodb8" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda8','prodb8');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda8','prodb8');"> ▷ </button>
+				</div>
+				
+				<p class="proddesc"><b>Description:</b> 15*12 inch painting size.<br>
+				<b>frame:</b> Traditional frame</p>
+				
+				<b><p class="prodcode">PRICE: RS.7500</P></b>
+				<input type="text" id="prodprice8" class="prodpricecss" value="7500"></input>
+				<button class="incbutton" onclick="qtydec('prodqty8','prodprice8',8);">-</button>
+				<input type="number" id="prodqty8" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty8','prodprice8',8);">+</button>
+				
+				<br><br>
+				<button class="cartbutton">
+					<a href="https://api.whatsapp.com/send?phone=919003593268&text=Hi%20I%20Would%20like%20to%20buy%20your%20product%20TAN008-Lakshmi%20" 
+					target="_top" style="text-decoration:none;color:white">Place order 💬</a>
+				</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+			
+			<div class="column">
+				<h2 class="headprod" id="productname9">Murugar valli deivanai</h2>
+				<p class="prodcode" id="productcode9">TAN009</p>
+				<img class="prodimgmarg" src="images/products/tanjorePaintings/TAN009/1.jpeg" id="proda9" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/tanjorePaintings/TAN009/2.jpeg" id="prodb9" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda9','prodb9');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda9','prodb9');"> ▷ </button>
+				</div>
+				
+				<p class="proddesc"><b>Description:</b> 18*15 inch painting size.<br>
+				<b>frame:</b> Traditional frame</p>
+				
+				<b><p class="prodcode">PRICE: RS.10,500</P></b>
+				<input type="text" id="prodprice9" class="prodpricecss" value="10500"></input>
+				<button class="incbutton" onclick="qtydec('prodqty9','prodprice9',9);">-</button>
+				<input type="number" id="prodqty9" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty9','prodprice9',9);">+</button>
+				
+				<br><br>
+				<button class="cartbutton">
+					<a href="https://api.whatsapp.com/send?phone=919003593268&text=Hi%20I%20Would%20like%20to%20buy%20your%20product%20TAN009-MurugarValliDeivanai%20" 
+					target="_top" style="text-decoration:none;color:white">Place order 💬</a>
+				</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+			
+			<div class="column">
+				<h2 class="headprod" id="productname10">Venkatachalapathy</h2>
+				<p class="prodcode" id="productcode10">TAN010</p>
+				<img class="prodimgmarg" src="images/products/tanjorePaintings/TAN010/1.jpeg" id="proda10" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/tanjorePaintings/TAN010/2.jpeg" id="prodb10" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda10','prodb10');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda10','prodb10');"> ▷ </button>
+				</div>
+				
+				<p class="proddesc"><b>Description:</b> 15*12 inch painting size.<br>
+				<b>frame:</b> Traditional frame</p>
+				
+				<b><p class="prodcode">PRICE: RS.7000</P></b>
+				<input type="text" id="prodprice10" class="prodpricecss" value="7000"></input>
+				<button class="incbutton" onclick="qtydec('prodqty10','prodprice10',10);">-</button>
+				<input type="number" id="prodqty10" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty10','prodprice10',10);">+</button>
+				
+				<br><br>
+				<button class="cartbutton">
+					<a href="https://api.whatsapp.com/send?phone=919003593268&text=Hi%20I%20Would%20like%20to%20buy%20your%20product%20TAN010-Venkatachalapathy%20" 
+					target="_top" style="text-decoration:none;color:white">Place order 💬</a>
+				</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+			
+			<div class="column">
+				<h2 class="headprod" id="productname11">Saibaba</h2>
+				<p class="prodcode" id="productcode11">TAN011</p>
+				<img class="prodimgmarg" src="images/products/tanjorePaintings/TAN011/1.jpeg" id="proda11" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/tanjorePaintings/TAN011/2.jpeg" id="prodb11" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda11','prodb11');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda11','prodb11');"> ▷ </button>
+				</div>
+				
+				<p class="proddesc"><b>Description:</b> 15*12 inch painting size.<br>
+				<b>frame:</b> Traditional frame</p>
+				
+				<b><p class="prodcode">PRICE: RS.7200</P></b>
+				<input type="text" id="prodprice11" class="prodpricecss" value="7200"></input>
+				<button class="incbutton" onclick="qtydec('prodqty11','prodprice11',11);">-</button>
+				<input type="number" id="prodqty11" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty11','prodprice11',11);">+</button>
+				
+				<br><br>
+				<button class="cartbutton">
+					<a href="https://api.whatsapp.com/send?phone=919003593268&text=Hi%20I%20Would%20like%20to%20buy%20your%20product%20TAN011-Saibaba%20" 
+					target="_top" style="text-decoration:none;color:white">Place order 💬</a>
+				</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+			
+			<div class="column">
+				<h2 class="headprod" id="productname12">Saraswathi</h2>
+				<p class="prodcode" id="productcode12">TAN012</p>
+				<img class="prodimgmarg" src="images/products/tanjorePaintings/TAN012/1.jpeg" id="proda12" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/tanjorePaintings/TAN012/2.jpeg" id="prodb12" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda12','prodb12');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda12','prodb12');"> ▷ </button>
+				</div>
+				
+				<p class="proddesc"><b>Description:</b> 15*12 inch painting size.<br>
+				<b>frame:</b> Traditional frame</p>
+				
+				<b><p class="prodcode">PRICE: RS.7100</P></b>
+				<input type="text" id="prodprice12" class="prodpricecss" value="7100"></input>
+				<button class="incbutton" onclick="qtydec('prodqty12','prodprice12',12);">-</button>
+				<input type="number" id="prodqty12" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty12','prodprice12',12);">+</button>
+				
+				<br><br>
+				<button class="cartbutton">
+					<a href="https://api.whatsapp.com/send?phone=919003593268&text=Hi%20I%20Would%20like%20to%20buy%20your%20product%20TAN012-Saraswathi%20" 
+					target="_top" style="text-decoration:none;color:white">Place order 💬</a>
+				</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+			
+			
+		</div>
+		</center>
+		
+		<br><br>
+		
+		<script src="js/main.js"></script>
+		
+		<script src="js/formsentry.js"></script>
+		<script src="js/finalpayment.js"></script>
+
+		<br><br><br>
+		
+		<!--bottom social media-->
+		
+		<center><div style="bottom:0;position:fixed; width:100%;">
+		<a href="tel:+919003593268"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/icon/phone.png" width='40px', height='40px' style="opacity:0.5"></a>
+		<a href="https://instagram.com/love__for_tanjorepaintings?igshid=ah91zcjirxt3" target="_blank"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/icon/insta.png" width='40px', height='40px' style="opacity:0.5"></a>
+		<a href="https://api.whatsapp.com/send?phone=919003593268&text=Hi%20I%20Would%20like%20to%20buy%20your%20Tanjorepainting" target="_top"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/icon/wa.png" width='50px', height='50px' style="opacity:0.5"></a>
+		</div></center>
+		<script>
+		function bigImg(x) {
+		  x.style.height = "60px";
+		  x.style.width = "60px";
+		  x.style.opacity = "1";
+		}
+
+		function normalImg(x) {
+		  x.style.height = "40px";
+		  x.style.width = "40px";
+		  x.style.opacity = "0.5";
+		}
+		</script>
+		
+		<!--ends here-->
+		
+		<a href="#" class="backtotop" style="display:inline;font-size:45px;text-align:center;">⇧</a>
+	</body>
+	
+</html>

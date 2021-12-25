@@ -1,0 +1,747 @@
+<!Doctype HTML>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="description" content="unique creations">
+		<meta name="keywords" content="unique creations, tanjore painting online, unique creations live, jewels online shopping, tanjore painting online shopping">
+		<meta name="author" content="engineerthoughts">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> Unique Creations</title>
+		<link rel="shortcut icon" href="images/logo/logo.png">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/rowcol.css">
+		<link rel="stylesheet" href="css/sidenav.css">
+		<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+	
+	<body>
+	
+	
+		<img src="images/logo/logo.png" width="200px"></img>
+		<div class="topnav" id="myTopnav">
+			<!--<a> <img src="images/logo.jpeg" width='20px', height='18px'> </a>-->
+			<a href="index.html">🏠 Home</a>
+			<a href="tanjorepaintings.html">🎨 Tanjore Painting</a>
+			<a href="jewels.html" class="active">💎 Jewels</a>
+			<a href="contact.html">📞 Contact</a>
+			<a id="topnav6" href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">☰</a>
+		</div>
+		
+		
+		
+		<div class="fixed">
+			<p class="cartListitem" onclick="openNav()">Cart List 🛒 <span id="cartquantity">0</span></p>
+		</div>
+		
+		
+		<center>
+		
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<p>Cart List ▽</p>
+			
+			<center>
+			<table id="cartlist" class="cartlistclass">
+				<tr>
+					<th>Product Name</th>
+					<th>Product Code</th>
+					<th>Price</th>
+					<th>Quantity</th>
+					<th>Total Price</th>
+					<th>Actions</th>
+				</tr>
+			</table>
+			<p>TOTAL PRICE: ₹<span id="ptotalvalue">0</span></p>
+			
+			<button id="proceedcheckout" class="checkoutbutton" onclick="openpay()" >Proceed to Checkout</button>
+			<br><br>
+			<div id="pdetails" style="display:none">
+			
+				
+					<div class="row">
+					
+						<div class="column50 c50left" style="text-align:right">
+							<span class="valtext">NAME</span>
+						</div>
+						<div class="column50 c50right">
+							<input type="text" class="getvalform" id="username" name="username" required></input>
+						</div>
+							<br><br>
+							
+						<div class="column50 c50left" style="text-align:right">
+							<span class="valtext">EMAIL</span>
+						</div>
+						<div class="column50 c50right">
+							<input type="text" class="getvalform" id="email" name="email" required></input>
+						</div>	
+							<br><br>
+						
+						<div class="column50 c50left" style="text-align:right">
+							<span class="valtext">ADDRESS</span>
+						</div>
+						<div class="column50 c50right">
+							<input type="text" class="getvalform" id="address" name="address" required></input>
+						</div>	
+							<br><br>
+							
+						<div class="column50 c50left" style="text-align:right">	
+							<span class="valtext">NUMBER</span>
+						</div>
+						
+						<div class="column50 c50right">
+							<input type="text" class="getvalform" id="phone" name="phone" required></input>
+						</div>	
+						
+						<div id="errorId" style="display:none;"><span style="color:red">*</span><span style="color:black">Please enter the Required Field</span></div>
+							<br><br>
+							
+						<input type="submit" class="checkoutbutton" id="payment_btn" value="PayNow" onclick="checkvalue();"></input>
+						
+					</div>
+			
+			</div>
+			
+			</center>
+		
+		</div>
+		
+	
+		<div class="row">
+			<div class="column">
+				<h2 class="headprod" id="productname01">2 layer multi colour Neckwear</h2>
+				<p class="prodcode" id="productcode01">JEW001</p>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW001/1.jpeg" id="proda01" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW001/2.jpeg" id="prodb01" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda01','prodb01');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda01','prodb01');"> ▷ </button>
+				</div>
+				
+				<p class="proddesc"><b>Description:</b> Multi colour glass beads with some uncut stones.</p>
+				
+				<b><p class="prodcode">PRICE: Rs.650</P></b>
+				<input type="text" id="prodprice01" class="prodpricecss" value="650"></input>
+				<button class="incbutton" onclick="qtydec('prodqty01','prodprice01',01);">-</button>
+				<input type="number" id="prodqty01" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty01','prodprice01',01);">+</button>
+				
+				<br><br>
+				<button class="cartbutton" onclick="addtocart('productname01','productcode01',01,'prodqty01','prodprice01');itemadd();">Add To Cart 🛒</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+			
+			<div class="column">
+				<h2 class="headprod" id="productname02">3 layer glass beads Neckwear</h2>
+				<p class="prodcode" id="productcode02">JEW002</p>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW002/1.jpeg" id="proda02" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW002/2.jpeg" id="prodb02" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda02','prodb02');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda02','prodb02');"> ▷ </button>
+				</div>
+				
+				<p class="proddesc"><b>Description:</b> Green colour pure glass beads</p>
+				
+				<b><p class="prodcode">PRICE: Rs.600</P></b>
+				<input type="text" id="prodprice02" class="prodpricecss" value="600"></input>
+				<button class="incbutton" onclick="qtydec('prodqty02','prodprice02',02);">-</button>
+				<input type="number" id="prodqty02" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty02','prodprice02',02);">+</button>
+				
+				<br><br>
+				<button class="cartbutton" onclick="addtocart('productname02','productcode02',02,'prodqty02','prodprice02');itemadd();">Add To Cart 🛒</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+
+			<div class="column">
+				<h2 class="headprod" id="productname03">Tiger eye neckwear</h2>
+				<p class="prodcode" id="productcode03">JEW003</p>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW003/1.jpeg" id="proda03" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW003/2.jpeg" id="prodb03" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda03','prodb03');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda03','prodb03');"> ▷ </button>
+				</div>
+				
+				<p class="proddesc"><b>Description:</b> Tiger eye beads with Krishna pendant.</p>
+				
+				<b><p class="prodcode">PRICE: Rs.850</P></b>
+				<input type="text" id="prodprice03" class="prodpricecss" value="850"></input>
+				<button class="incbutton" onclick="qtydec('prodqty03','prodprice03',03);">-</button>
+				<input type="number" id="prodqty03" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty03','prodprice03',03);">+</button>
+				
+				<br><br>
+				<button class="cartbutton" onclick="addtocart('productname03','productcode03',03,'prodqty03','prodprice03');itemadd();">Add To Cart 🛒</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+
+			<div class="column">
+				<h2 class="headprod" id="productname04">Multi colour Neckwear</h2>
+				<p class="prodcode" id="productcode04">JEW004</p>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW004/1.jpeg" id="proda04" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW004/2.jpeg" id="prodb04" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda04','prodb04');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda04','prodb04');"> ▷ </button>
+				</div>
+				
+				<p class="proddesc"><b>Description:</b> Multi colour Agate beads with victorian beads.</p>
+				
+				<b><p class="prodcode">PRICE: Rs.550</P></b>
+				<input type="text" id="prodprice04" class="prodpricecss" value="550"></input>
+				<button class="incbutton" onclick="qtydec('prodqty04','prodprice04',04);">-</button>
+				<input type="number" id="prodqty04" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty04','prodprice04',04);">+</button>
+				
+				<br><br>
+				<button class="cartbutton" onclick="addtocart('productname04','productcode04',04,'prodqty04','prodprice04');itemadd();">Add To Cart 🛒</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+			
+			<div class="column">
+				<h2 class="headprod" id="productname05">Black uncut stone Neckwear</h2>
+				<p class="prodcode" id="productcode05">JEW005</p>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW005/1.jpeg" id="proda05" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW005/2.jpeg" id="prodb05" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda05','prodb05');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda05','prodb05');"> ▷ </button>
+				</div>
+				
+				<p class="proddesc"><b>Description:</b> Black uncut stones with Glass pendant.</p>
+				
+				<b><p class="prodcode">PRICE: Rs.650</P></b>
+				<input type="text" id="prodprice05" class="prodpricecss" value="650"></input>
+				<button class="incbutton" onclick="qtydec('prodqty05','prodprice05',05);">-</button>
+				<input type="number" id="prodqty05" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty05','prodprice05',05);">+</button>
+				
+				<br><br>
+				<button class="cartbutton" onclick="addtocart('productname05','productcode05',05,'prodqty05','prodprice05');itemadd();">Add To Cart 🛒</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+			
+			<div class="column">
+				<h2 class="headprod" id="productname06">3 layer chip stone Neckwear</h2>
+				<p class="prodcode" id="productcode06">JEW006</p>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW006/1.jpeg" id="proda06" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW006/2.jpeg" id="prodb06" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda06','prodb06');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda06','prodb06');"> ▷ </button>
+				</div>
+				
+				<p class="proddesc"><b>Description:</b> Brown chip stones with glass beads.</p>
+				
+				<b><p class="prodcode">PRICE: Rs.550</P></b>
+				<input type="text" id="prodprice06" class="prodpricecss" value="550"></input>
+				<button class="incbutton" onclick="qtydec('prodqty06','prodprice06',06);">-</button>
+				<input type="number" id="prodqty06" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty06','prodprice06',06);">+</button>
+				
+				<br><br>
+				<button class="cartbutton" onclick="addtocart('productname06','productcode06',06,'prodqty06','prodprice06');itemadd();">Add To Cart 🛒</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+			
+			<div class="column">
+				<h2 class="headprod" id="productname07">Glass beads Neckwear</h2>
+				<p class="prodcode" id="productcode07">JEW007</p>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW007/1.jpeg" id="proda07" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW007/2.jpeg" id="prodb07" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda07','prodb07');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda07','prodb07');"> ▷ </button>
+				</div>
+				
+				<p class="proddesc"><b>Description:</b> Brown glass beads.<br>&nbsp</p>
+				
+				<b><p class="prodcode">PRICE: Rs.400</P></b>
+				<input type="text" id="prodprice07" class="prodpricecss" value="400"></input>
+				<button class="incbutton" onclick="qtydec('prodqty07','prodprice07',07);">-</button>
+				<input type="number" id="prodqty07" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty07','prodprice07',07);">+</button>
+				
+				<br><br>
+				<button class="cartbutton" onclick="addtocart('productname07','productcode07',07,'prodqty07','prodprice07');itemadd();">Add To Cart 🛒</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+			
+			<div class="column">
+				<h2 class="headprod" id="productname08">Bruhed beads Neckwear</h2>
+				<p class="prodcode" id="productcode08">JEW008</p>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW008/1.jpeg" id="proda08" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW008/2.jpeg" id="prodb08" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda08','prodb08');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda08','prodb08');"> ▷ </button>
+				</div>
+				
+				<p class="proddesc"><b>Description:</b> Bruhed beads Neckwear<br>&nbsp</p>
+				
+				<b><p class="prodcode">PRICE: Rs.450</P></b>
+				<input type="text" id="prodprice08" class="prodpricecss" value="450"></input>
+				<button class="incbutton" onclick="qtydec('prodqty08','prodprice08',08);">-</button>
+				<input type="number" id="prodqty08" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty08','prodprice08',08);">+</button>
+				
+				<br><br>
+				<button class="cartbutton" onclick="addtocart('productname08','productcode08',08,'prodqty08','prodprice08');itemadd();">Add To Cart 🛒</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+			
+			<div class="column">
+				<h2 class="headprod" id="productname09">Crystal drop shape <br>Neckwear</h2>
+				<p class="prodcode" id="productcode09">JEW009</p>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW009/1.jpeg" id="proda09" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW009/2.jpeg" id="prodb09" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda09','prodb09');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda09','prodb09');"> ▷ </button>
+				</div>
+				
+				
+				
+				<b><p class="prodcode">PRICE: Rs.800</P></b>
+				<input type="text" id="prodprice09" class="prodpricecss" value="800"></input>
+				<button class="incbutton" onclick="qtydec('prodqty09','prodprice09',09);">-</button>
+				<input type="number" id="prodqty09" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty09','prodprice09',09);">+</button>
+				
+				<br><br>
+				<button class="cartbutton" onclick="addtocart('productname09','productcode09',09,'prodqty09','prodprice09');itemadd();">Add To Cart 🛒</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+			
+			<div class="column">
+				<h2 class="headprod" id="productname10">Flat glass beads <br>Neckwear</h2>
+				<p class="prodcode" id="productcode10">JEW010</p>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW010/1.jpeg" id="proda10" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW010/2.jpeg" id="prodb10" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda10','prodb10');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda10','prodb10');"> ▷ </button>
+				</div>
+				
+				
+				
+				<b><p class="prodcode">PRICE: Rs.350</P></b>
+				<input type="text" id="prodprice10" class="prodpricecss" value="350"></input>
+				<button class="incbutton" onclick="qtydec('prodqty10','prodprice10',10);">-</button>
+				<input type="number" id="prodqty10" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty10','prodprice10',10);">+</button>
+				
+				<br><br>
+				<button class="cartbutton" onclick="addtocart('productname10','productcode10',10,'prodqty10','prodprice10');itemadd();">Add To Cart 🛒</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+			
+			<div class="column">
+				<h2 class="headprod" id="productname11">Agate beads with gemstone pendant Neckwear</h2>
+				<p class="prodcode" id="productcode11">JEW011</p>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW011/1.jpeg" id="proda11" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW011/2.jpeg" id="prodb11" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda11','prodb11');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda11','prodb11');"> ▷ </button>
+				</div>
+				
+				
+				
+				<b><p class="prodcode">PRICE: Rs.650</P></b>
+				<input type="text" id="prodprice11" class="prodpricecss" value="650"></input>
+				<button class="incbutton" onclick="qtydec('prodqty11','prodprice11',11);">-</button>
+				<input type="number" id="prodqty11" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty11','prodprice11',11);">+</button>
+				
+				<br><br>
+				<button class="cartbutton" onclick="addtocart('productname11','productcode11',11,'prodqty11','prodprice11');itemadd();">Add To Cart 🛒</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+			
+			<div class="column">
+				<h2 class="headprod" id="productname12">Uncut stone with Handpainted pendant Neckwear</h2>
+				<p class="prodcode" id="productcode12">JEW012</p>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW012/1.jpeg" id="proda12" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW012/2.jpeg" id="prodb12" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda12','prodb12');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda12','prodb12');"> ▷ </button>
+				</div>
+				
+				
+				
+				<b><p class="prodcode">PRICE: Rs.1050</P></b>
+				<input type="text" id="prodprice12" class="prodpricecss" value="1050"></input>
+				<button class="incbutton" onclick="qtydec('prodqty12','prodprice12',12);">-</button>
+				<input type="number" id="prodqty12" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty12','prodprice12',12);">+</button>
+				
+				<br><br>
+				<button class="cartbutton" onclick="addtocart('productname12','productcode12',12,'prodqty12','prodprice12');itemadd();">Add To Cart 🛒</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+			
+			<div class="column">
+				<h2 class="headprod" id="productname13">Agate beads with japanese beads pendant Neckwear</h2>
+				<p class="prodcode" id="productcode13">JEW013</p>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW013/1.jpeg" id="proda13" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW013/2.jpeg" id="prodb13" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda13','prodb13');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda13','prodb13');"> ▷ </button>
+				</div>
+				
+				
+				
+				<b><p class="prodcode">PRICE: Rs.550</P></b>
+				<input type="text" id="prodprice13" class="prodpricecss" value="550"></input>
+				<button class="incbutton" onclick="qtydec('prodqty13','prodprice13',13);">-</button>
+				<input type="number" id="prodqty13" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty13','prodprice13',13);">+</button>
+				
+				<br><br>
+				<button class="cartbutton" onclick="addtocart('productname13','productcode13',13,'prodqty13','prodprice13');itemadd();">Add To Cart 🛒</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+			
+			<div class="column">
+				<h2 class="headprod" id="productname14">Multi color beads <br>Neckwear</h2>
+				<p class="prodcode" id="productcode14">JEW014</p>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW014/1.jpeg" id="proda14" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW014/2.jpeg" id="prodb14" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda14','prodb14');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda14','prodb14');"> ▷ </button>
+				</div>
+				
+				
+				
+				<b><p class="prodcode">PRICE: Rs.450</P></b>
+				<input type="text" id="prodprice14" class="prodpricecss" value="450"></input>
+				<button class="incbutton" onclick="qtydec('prodqty14','prodprice14',14);">-</button>
+				<input type="number" id="prodqty14" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty14','prodprice14',14);">+</button>
+				
+				<br><br>
+				<button class="cartbutton" onclick="addtocart('productname14','productcode14',14,'prodqty14','prodprice14');itemadd();">Add To Cart 🛒</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+			
+			<div class="column">
+				<h2 class="headprod" id="productname15">Multi color glass beads <br>Neckwear</h2>
+				<p class="prodcode" id="productcode15">JEW015</p>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW015/1.jpeg" id="proda15" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW015/2.jpeg" id="prodb15" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda15','prodb15');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda15','prodb15');"> ▷ </button>
+				</div>
+				
+				
+				
+				<b><p class="prodcode">PRICE: Rs.500</P></b>
+				<input type="text" id="prodprice15" class="prodpricecss" value="500"></input>
+				<button class="incbutton" onclick="qtydec('prodqty15','prodprice15',15);">-</button>
+				<input type="number" id="prodqty15" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty15','prodprice15',15);">+</button>
+				
+				<br><br>
+				<button class="cartbutton" onclick="addtocart('productname15','productcode15',15,'prodqty15','prodprice15');itemadd();">Add To Cart 🛒</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+			
+			<div class="column">
+				<h2 class="headprod" id="productname16">Cat eye beads <br>Neckwear</h2>
+				<p class="prodcode" id="productcode16">JEW016</p>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW016/1.jpeg" id="proda16" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW016/2.jpeg" id="prodb16" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda16','prodb16');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda16','prodb16');"> ▷ </button>
+				</div>
+				
+				
+				
+				<b><p class="prodcode">PRICE: Rs.500</P></b>
+				<input type="text" id="prodprice16" class="prodpricecss" value="500"></input>
+				<button class="incbutton" onclick="qtydec('prodqty16','prodprice16',16);">-</button>
+				<input type="number" id="prodqty16" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty16','prodprice16',16);">+</button>
+				
+				<br><br>
+				<button class="cartbutton" onclick="addtocart('productname16','productcode16',16,'prodqty16','prodprice16');itemadd();">Add To Cart 🛒</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+			
+			<div class="column">
+				<h2 class="headprod" id="productname17">Tiger eye beads <br>Neckwear</h2>
+				<p class="prodcode" id="productcode17">JEW017</p>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW017/1.jpeg" id="proda17" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW017/2.jpeg" id="prodb17" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda17','prodb17');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda17','prodb17');"> ▷ </button>
+				</div>
+				
+				
+				
+				<b><p class="prodcode">PRICE: Rs.550</P></b>
+				<input type="text" id="prodprice17" class="prodpricecss" value="550"></input>
+				<button class="incbutton" onclick="qtydec('prodqty17','prodprice17',17);">-</button>
+				<input type="number" id="prodqty17" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty17','prodprice17',17);">+</button>
+				
+				<br><br>
+				<button class="cartbutton" onclick="addtocart('productname17','productcode17',17,'prodqty17','prodprice17');itemadd();">Add To Cart 🛒</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+			
+			<div class="column">
+				<h2 class="headprod" id="productname18">Glass beads<br> Neckwear</h2>
+				<p class="prodcode" id="productcode18">JEW018</p>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW018/1.jpeg" id="proda18" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW018/2.jpeg" id="prodb18" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda18','prodb18');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda18','prodb18');"> ▷ </button>
+				</div>
+				
+				
+				
+				<b><p class="prodcode">PRICE: Rs.450</P></b>
+				<input type="text" id="prodprice18" class="prodpricecss" value="450"></input>
+				<button class="incbutton" onclick="qtydec('prodqty18','prodprice18',18);">-</button>
+				<input type="number" id="prodqty18" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty18','prodprice18',18);">+</button>
+				
+				<br><br>
+				<button class="cartbutton" onclick="addtocart('productname18','productcode18',18,'prodqty18','prodprice18');itemadd();">Add To Cart 🛒</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+			
+			<div class="column">
+				<h2 class="headprod" id="productname19">Flat glass beads <br>Neckwear</h2>
+				<p class="prodcode" id="productcode19">JEW019</p>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW019/1.jpeg" id="proda19" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW019/2.jpeg" id="prodb19" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda19','prodb19');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda19','prodb19');"> ▷ </button>
+				</div>
+				
+				
+				
+				<b><p class="prodcode">PRICE: Rs.350</P></b>
+				<input type="text" id="prodprice19" class="prodpricecss" value="350"></input>
+				<button class="incbutton" onclick="qtydec('prodqty19','prodprice19',19);">-</button>
+				<input type="number" id="prodqty19" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty19','prodprice19',19);">+</button>
+				
+				<br><br>
+				<button class="cartbutton" onclick="addtocart('productname19','productcode19',19,'prodqty19','prodprice19');itemadd();">Add To Cart 🛒</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+			
+			<div class="column">
+				<h2 class="headprod" id="productname20">Red glass beads with peacock pendant Neckwear</h2>
+				<p class="prodcode" id="productcode20">JEW020</p>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW020/1.jpeg" id="proda20" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW020/2.jpeg" id="prodb20" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda20','prodb20');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda20','prodb20');"> ▷ </button>
+				</div>
+				
+				
+				
+				<b><p class="prodcode">PRICE: Rs.550</P></b>
+				<input type="text" id="prodprice20" class="prodpricecss" value="550"></input>
+				<button class="incbutton" onclick="qtydec('prodqty20','prodprice20',20);">-</button>
+				<input type="number" id="prodqty20" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty20','prodprice20',20);">+</button>
+				
+				<br><br>
+				<button class="cartbutton" onclick="addtocart('productname20','productcode20',20,'prodqty20','prodprice20');itemadd();">Add To Cart 🛒</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+			
+			<div class="column">
+				<h2 class="headprod" id="productname21">Shell pearl <br>Neckwear</h2>
+				<p class="prodcode" id="productcode21">JEW021</p>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW021/1.jpeg" id="proda21" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW021/2.jpeg" id="prodb21" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda21','prodb21');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda21','prodb21');"> ▷ </button>
+				</div>
+				
+				
+				
+				<b><p class="prodcode">PRICE: Rs.550</P></b>
+				<input type="text" id="prodprice21" class="prodpricecss" value="550"></input>
+				<button class="incbutton" onclick="qtydec('prodqty21','prodprice21',21);">-</button>
+				<input type="number" id="prodqty21" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty21','prodprice21',21);">+</button>
+				
+				<br><br>
+				<button class="cartbutton" onclick="addtocart('productname21','productcode21',21,'prodqty21','prodprice21');itemadd();">Add To Cart 🛒</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+			
+			<div class="column">
+				<h2 class="headprod" id="productname22">Shell pearl with ganesha pendant Neckwear</h2>
+				<p class="prodcode" id="productcode22">JEW022</p>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW022/1.jpeg" id="proda22" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW022/2.jpeg" id="prodb22" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda22','prodb22');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda22','prodb22');"> ▷ </button>
+				</div>
+				
+				
+				
+				<b><p class="prodcode">PRICE: Rs.750</P></b>
+				<input type="text" id="prodprice22" class="prodpricecss" value="750"></input>
+				<button class="incbutton" onclick="qtydec('prodqty22','prodprice22',22);">-</button>
+				<input type="number" id="prodqty22" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty22','prodprice22',22);">+</button>
+				
+				<br><br>
+				<button class="cartbutton" onclick="addtocart('productname22','productcode22',22,'prodqty22','prodprice22');itemadd();">Add To Cart 🛒</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+			
+			<div class="column">
+				<h2 class="headprod" id="productname23">2 layer white chip <br>Neckwear</h2>
+				<p class="prodcode" id="productcode23">JEW023</p>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW023/1.jpeg" id="proda23" width="75%"></img>
+				<img class="prodimgmarg" src="images/products/jewellery/JEW023/2.jpeg" id="prodb23" width="75%" style="display:none"></img>
+				
+				<div>
+					<button class="prodnavbutton" onclick="navprod1('proda23','prodb23');"> ◁ </button>
+					<button class="prodnavbutton" onclick="navprod2('proda23','prodb23');"> ▷ </button>
+				</div>
+				
+				
+				
+				<b><p class="prodcode">PRICE: Rs.500</P></b>
+				<input type="text" id="prodprice23" class="prodpricecss" value="500"></input>
+				<button class="incbutton" onclick="qtydec('prodqty23','prodprice23',23);">-</button>
+				<input type="number" id="prodqty23" class="prodqtycss" value=1 disabled></input>
+				<button class="incbutton" onclick="qtyinc('prodqty23','prodprice23',23);">+</button>
+				
+				<br><br>
+				<button class="cartbutton" onclick="addtocart('productname23','productcode23',23,'prodqty23','prodprice23');itemadd();">Add To Cart 🛒</button>
+				<br><br>
+				
+				<img src="images/products/border.png" width="100%" height="50%"></img>
+			</div>
+		
+		</div>
+		</center>
+		
+		<br><br>
+		
+		
+		
+		<script src="js/formsentry.js"></script>
+		<script src="js/finalpayment.js"></script>
+		<script src="js/mainjewels.js"></script>
+		<br><br><br>
+		
+		<!--bottom social media-->
+		
+		<center><div style="bottom:0;position:fixed; width:100%;">
+		<a href="tel:+919003593268"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/icon/phone.png" width='40px', height='40px' style="opacity:0.5"></a>
+		<a href="https://instagram.com/love__for_tanjorepaintings?igshid=ah91zcjirxt3" target="_blank"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/icon/insta.png" width='40px', height='40px' style="opacity:0.5"></a>
+		<a href="https://api.whatsapp.com/send?phone=919003593268&text=Hi%20I%20Would%20like%20to%20buy%20your%20product" target="_top"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/icon/wa.png" width='50px', height='50px' style="opacity:0.5"></a>
+		</div></center>
+		<script>
+		function bigImg(x) {
+		  x.style.height = "60px";
+		  x.style.width = "60px";
+		  x.style.opacity = "1";
+		}
+
+		function normalImg(x) {
+		  x.style.height = "40px";
+		  x.style.width = "40px";
+		  x.style.opacity = "0.5";
+		}
+		</script>
+		
+		<!--ends here-->
+		<a href="#" class="backtotop" style="display:inline;font-size:45px;text-align:center;">⇧</a>
+	</body>
+	
+</html>
