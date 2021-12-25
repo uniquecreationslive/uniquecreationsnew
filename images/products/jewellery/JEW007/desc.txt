@@ -1,0 +1,8 @@
+
+Product name : Glass beads Neckwear
+
+product code : JEW007
+
+description  : Brown glass beads.
+
+price : Rs.400
