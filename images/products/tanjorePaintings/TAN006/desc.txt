@@ -1,0 +1,10 @@
+
+
+Name : Komatha
+
+Description: 10*8 inch painting size.
+      frame: Traditional frame
+
+Price : RS.2500
+
+Product code:TAN006

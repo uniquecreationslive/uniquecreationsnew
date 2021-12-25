@@ -1,0 +1,9 @@
+
+Name : Venkatachalapathy
+
+Description: 15*12 inch painting size.
+      frame: Traditional frame
+
+Price : RS.7000
+
+Product code:TAN010

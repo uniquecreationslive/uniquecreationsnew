@@ -1,0 +1,9 @@
+
+Name : Saibaba
+
+Description: 15*12 inch painting size.
+      frame: Traditional frame
+
+Price : RS.7200
+
+Product code:TAN011

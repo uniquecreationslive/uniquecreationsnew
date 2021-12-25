@@ -1,0 +1,9 @@
+
+Name : Radha khrishna
+
+Description: 15*12 inch painting size.
+      frame: Traditional frame
+
+Price : RS.7500
+
+Product code:TAN005
